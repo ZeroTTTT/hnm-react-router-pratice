@@ -43,8 +43,7 @@ function App() {
         {/* <Route path="/product/:id" element={ <ProductDetail/> }/> */}
         <Route 
           path="/product/:id" 
-          element={ <PrivateRoute 
-          authenticate={authenticate}/> }
+          element={ <PrivateRoute authenticate={authenticate}/> }
         />
       </Routes>
 
