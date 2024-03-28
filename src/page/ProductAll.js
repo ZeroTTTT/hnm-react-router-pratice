@@ -17,12 +17,10 @@ const ProductAll = () => {
     let data = await response.json();
     setProductList(data);
   }
-
-  
   
   useEffect( ()=>{  //api 호출은 useEffect에서 한다!
-    getProduhttps://github.com/ZeroTTTTcts()
-  },[query]) //query가 바뀔때마다 재실행되도록
+    getProducts();
+  },[query])          //query가 바뀔때마다 재실행되도록
 
   return ( 
     <div>      
