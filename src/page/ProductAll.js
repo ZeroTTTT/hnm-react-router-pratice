@@ -11,14 +11,17 @@ const ProductAll = () => {
   const getProducts= async ()=>{
     let searchQuery = query.get("q") || "";
     console.log("쿼리값은?", searchQuery);
-    let url = `http://localhost:5000/products?q=${searchQuery}`;
-    let response = await fetch(url)
-    let data = await response.json()
+    // let url = `http://localhost:5000/products?q=${searchQuery}`;
+    let url = `https://my-json-server.typicode.com/ZeroTTTT/hnm-react-router-pratice/products?q=${searchQuery}`;
+    let response = await fetch(url);
+    let data = await response.json();
     setProductList(data);
   }
 
+  
+  
   useEffect( ()=>{  //api 호출은 useEffect에서 한다!
-    getProducts()
+    getProduhttps://github.com/ZeroTTTTcts()
   },[query]) //query가 바뀔때마다 재실행되도록
 
   return ( 
@@ -35,5 +38,7 @@ const ProductAll = () => {
     </div>
   )
 }
+
+
 
 export default ProductAll
